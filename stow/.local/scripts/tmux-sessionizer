@@ -12,6 +12,11 @@ name=$(basename "$dir" | tr . _)
 
 if ! tmux has-session -t="$name" 2>/dev/null; then
   tmux new-session -ds "$name" -c "$dir"
+
+  # run the project hook, or the default one
+  hook=$dir/.tmux-sessionizer.sh
+  [[ -f $hook ]] || hook=~/.config/tmux/default-sessionizer.sh
+  [[ -f $hook ]] && tmux send-keys -t "$name" "source '$hook'" C-m
 fi
 
 if [[ -n $TMUX ]]; then
