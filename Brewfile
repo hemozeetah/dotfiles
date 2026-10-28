@@ -12,6 +12,7 @@ brew "stow"
 brew "tmux"
 brew "tree"
 brew "tree-sitter-cli"
+brew "zsh-autosuggestions"
 
 # languages & lsps
 brew "bash-language-server"

@@ -1,0 +1,30 @@
+[user]
+	name = hemozeetah
+	email = ayhamdabah@gmail.com
+
+[init]
+	defaultBranch = master
+
+[core]
+	editor = nvim
+
+[push]
+	autoSetupRemote = true
+
+[fetch]
+	prune = true
+
+[pull]
+	ff = only
+
+[diff]
+	tool = nvimdiff
+
+[merge]
+	tool = nvimdiff
+
+[mergetool]
+	keepBackup = false
+
+[include]
+	path = ~/.gitconfig.local
