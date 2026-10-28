@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# pick a project in ~/code and switch to its tmux session
+
+if [[ $# -eq 1 ]]; then
+  dir=$1
+else
+  dir=$(fd --type d --max-depth 1 . ~/code | fzf)
+fi
+[[ -z $dir ]] && exit 0
+
+name=$(basename "$dir" | tr . _)
+
+if ! tmux has-session -t="$name" 2>/dev/null; then
+  tmux new-session -ds "$name" -c "$dir"
+fi
+
+if [[ -n $TMUX ]]; then
+  tmux switch-client -t "$name"
+else
+  tmux attach -t "$name"
+fi
