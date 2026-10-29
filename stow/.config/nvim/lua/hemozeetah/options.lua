@@ -1,25 +1,26 @@
-local opt = vim.opt
+-- options
+vim.opt.guicursor = "i:hor20-Cursor"
 
-opt.guicursor = "i:hor20-Cursor"
+vim.opt.number = true
+vim.opt.relativenumber = true
 
-opt.number = true
-opt.relativenumber = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
+vim.opt.expandtab = true
 
-opt.tabstop = 2
-opt.shiftwidth = 2
-opt.softtabstop = 2
-opt.expandtab = true
+vim.opt.wrap = false
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
+vim.opt.colorcolumn = "80"
+vim.opt.cursorline = true
 
-opt.wrap = false
-opt.splitright = true
-opt.scrolloff = 8
-opt.signcolumn = "yes"
-opt.colorcolumn = "80"
-opt.cursorline = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
-opt.ignorecase = true
-opt.smartcase = true
-
+-- packages
 vim.cmd.packadd("nvim.undotree")
 
 -- autocmds
