@@ -7,6 +7,7 @@ else
   dir=$(fd --type d --max-depth 1 . ~/code | fzf)
 fi
 [[ -z $dir ]] && exit 0
+dir=$(cd "$dir" && pwd) || exit 1
 
 name=$(basename "$dir" | tr . _)
 
