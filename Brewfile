@@ -16,6 +16,7 @@ brew "zsh-autosuggestions"
 
 # languages & lsps
 brew "bash-language-server"
+brew "lua-language-server"
 brew "pyright"
 brew "ruff"
 brew "rust"
