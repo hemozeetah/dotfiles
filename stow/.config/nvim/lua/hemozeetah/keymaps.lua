@@ -1,5 +1,4 @@
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
-vim.keymap.set("n", "<leader>e", "<cmd>Explore<CR>")
 
 -- split windows
 vim.keymap.set("n", "<leader>vs", vim.cmd.vsplit)

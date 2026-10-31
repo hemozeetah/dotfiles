@@ -8,6 +8,7 @@ vim.pack.add({
   "https://github.com/nvim-treesitter/nvim-treesitter-context",
   { src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1.*") },
   "https://github.com/github/copilot.vim",
+  "https://github.com/stevearc/oil.nvim",
 }, { confirm = false })
 
 require("hemozeetah.plugins.colorscheme")
@@ -17,3 +18,4 @@ require("hemozeetah.plugins.harpoon")
 require("hemozeetah.plugins.treesitter")
 require("hemozeetah.plugins.treesitter-context")
 require("hemozeetah.plugins.blink")
+require("hemozeetah.plugins.oil")

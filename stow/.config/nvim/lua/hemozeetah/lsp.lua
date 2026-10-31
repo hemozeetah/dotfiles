@@ -20,5 +20,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "grt", builtin.lsp_type_definitions, opts)
     vim.keymap.set("n", "gO", builtin.lsp_document_symbols, opts)
     vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, opts)
+    vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
   end,
 })
