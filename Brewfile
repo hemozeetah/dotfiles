@@ -1,4 +1,4 @@
-tap "nikitabobko/tap"
+tap "jurplel/tap"
 
 # cli
 brew "fd"
@@ -23,6 +23,6 @@ brew "rust"
 brew "rust-analyzer"
 
 # apps
-cask "aerospace"
+cask "jurplel/tap/instant-space-switcher", trusted: true
 cask "claude-code"
 cask "ghostty"
