@@ -1,0 +1,10 @@
+font-size = 13
+theme = light:Rose Pine Dawn,dark:Rose Pine
+background = #000000
+background-opacity = 0.95
+cursor-style = block
+cursor-style-blink = false
+macos-titlebar-style = hidden
+macos-option-as-alt = true
+window-save-state = always
+quit-after-last-window-closed = true

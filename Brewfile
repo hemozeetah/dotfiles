@@ -25,4 +25,4 @@ brew "rust-analyzer"
 # apps
 cask "aerospace"
 cask "claude-code"
-cask "kitty"
+cask "ghostty"
