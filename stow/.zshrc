@@ -28,6 +28,15 @@ bindkey '^[f' forward-word
 bindkey '^[[1;3D' backward-word
 bindkey '^[[1;3C' forward-word
 
+autoload -Uz backward-kill-word-match
+zle -N backward-kill-space-word backward-kill-word-match
+zstyle ':zle:backward-kill-space-word' word-style whitespace
+bindkey '^W' backward-kill-space-word
+zle -N backward-kill-path-word backward-kill-word-match
+zstyle ':zle:backward-kill-path-word' word-style normal
+zstyle ':zle:backward-kill-path-word' word-chars '*?_-.[]~'
+bindkey '^[^?' backward-kill-path-word
+
 # plugins
 command -v fzf >/dev/null && source <(fzf --zsh)
 [[ -f $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]] &&
